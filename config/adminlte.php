@@ -299,100 +299,113 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type' => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
-        // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
-        ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
-        ],
+    // Navbar items:
+    [
+        'type' => 'navbar-search',
+        'text' => 'Search',
+        'topnav_right' => true,
     ],
+    [
+        'type' => 'fullscreen-widget',
+        'topnav_right' => true,
+    ],
+
+    // Sidebar items:
+    [
+        'type' => 'sidebar-menu-search',
+        'text' => 'Search',
+    ],
+    // Dashboard
+    [
+        'text' => 'Dashboard',
+        'url'  => 'admin/dashboard',
+        'icon' => 'fas fa-fw fa-tachometer-alt',
+    ],
+    // Blog
+    [
+        'text' => 'Blogs',
+        'url'  => 'admin/blogs',
+        'icon' => 'fas fa-fw fa-blog',
+    ],
+    // Sliders
+    [
+        'text' => 'Sliders',
+        'url'  => 'admin/sliders',
+        'icon' => 'fas fa-fw fa-images',
+    ],
+    // Services
+    [
+        'text' => 'Services',
+        'url'  => 'admin/services',
+        'icon' => 'fas fa-fw fa-concierge-bell',
+    ],
+    // Categories
+    [
+        'text' => 'Categories',
+        'url'  => 'admin/categories',
+        'icon' => 'fas fa-fw fa-list',
+    ],
+    // Products
+    [
+        'text' => 'Products',
+        'url'  => 'admin/products',
+        'icon' => 'fas fa-fw fa-box',
+    ],
+    // Gallery
+    [
+        'text' => 'Gallery',
+        'url'  => 'admin/gallery',
+        'icon' => 'fas fa-fw fa-photo-video',
+    ],
+    // Orders
+    [
+        'text' => 'Orders',
+        'url'  => 'admin/orders',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+    ],
+    // Site Contents
+    [
+        'text' => 'Site Contents',
+        'url'  => 'admin/site_contents',
+        'icon' => 'fas fa-fw fa-file-alt',
+    ],
+    // Contacts
+    [
+        'text' => 'Contacts',
+        'url'  => 'admin/contacts',
+        'icon' => 'fas fa-fw fa-envelope',
+    ],
+
+    ['header' => 'ACCOUNT SETTINGS'],
+    [
+        'text' => 'Profile',
+        'url'  => 'admin/settings',
+        'icon' => 'fas fa-fw fa-user',
+    ],
+    [
+        'text' => 'Change Password',
+        'url'  => 'admin/settings',
+        'icon' => 'fas fa-fw fa-lock',
+    ],
+
+    ['header' => 'LABELS'],
+    [
+        'text' => 'Important',
+        'icon_color' => 'red',
+        'url'  => '#',
+    ],
+    [
+        'text' => 'Warning',
+        'icon_color' => 'yellow',
+        'url'  => '#',
+    ],
+    [
+        'text' => 'Information',
+        'icon_color' => 'cyan',
+        'url'  => '#',
+    ],
+],
+
 
     /*
     |--------------------------------------------------------------------------
