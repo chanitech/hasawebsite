@@ -21,6 +21,209 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
+
+        /* ================= TOP NAV ================= */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    z-index: 1050;
+    font-size: 13px;
+}
+
+.top-nav__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 13px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons li a:hover {
+    opacity: 0.7;
+}
+
+.top-nav__wrapper__selectors {
+    display: flex;
+    gap: 16px;
+}
+
+.top-nav__auth {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: opacity 0.3s ease;
+}
+
+.top-nav__auth:hover {
+    opacity: 0.7;
+}
+
+
+/* ================= MENU BAR ================= */
+.menu {
+    position: sticky;
+    top: 36px; /* height of top bar */
+    background: #fff;
+    z-index: 1040;
+    border-bottom: 1px solid #eee;
+}
+
+.menu__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__wrapper__logo img {
+    height: 42px;
+}
+
+/* NAVIGATION */
+.navigator ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigator ul li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+.dropable-icon {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* DROPDOWN */
+
+/* ================= DROPDOWN FIX ================= */
+
+.relative {
+    position: relative;
+}
+
+/* HIDE submenu by default */
+.dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 260px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+
+    /* FORCE HIDE */
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 9999;
+}
+
+/* SHOW submenu on hover */
+.relative:hover > .dropdown-menu-custom {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* submenu links */
+.dropdown-menu-custom li a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu-custom li a:hover {
+    background: #f5f5f5;
+}
+
+
+
+/* RIGHT ICONS */
+.menu__wrapper__functions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.menu-icon img {
+    height: 22px;
+}
+
+.menu__cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart__quantity {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* MOBILE MENU ICON */
+.menu-icon.-navbar {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-icon.-navbar .bar {
+    width: 22px;
+    height: 2px;
+    background: #000;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
         /* Scroll Top Button */
         .scroll-top {
             position: fixed;
@@ -80,6 +283,16 @@
     height: 200px;
 }
 
+/* ================= FOOTER ================= */
+        footer {
+            margin-top: auto;
+        }
+
+
+
+
+
+
 
         html {
             scroll-behavior: smooth;
@@ -89,6 +302,8 @@
     @stack('styles')
 </head>
 <body>
+     {{-- ================= TOPBAR ================= --}}
+    @include('frontend.partials.topbar')
 
     {{-- ================= NAVBAR ================= --}}
     @include('frontend.partials.navbar')
@@ -101,9 +316,12 @@
     {{-- ================= FOOTER ================= --}}
     @include('frontend.partials.footer')
 
-    {{-- ================= FLOATING ACTIONS ================= --}}
+   
+    </div>
+
+     {{-- ================= FLOATING ACTIONS ================= --}}
     <div class="floating-actions">
-        <a href="https://wa.me/256775677760" target="_blank" class="btn btn-success rounded-circle shadow-lg" title="WhatsApp">
+        <a href="https://wa.me/255763889048" target="_blank" class="btn btn-success rounded-circle shadow-lg" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="{{ route('frontend.contact') }}" class="btn btn-primary rounded-circle shadow-lg" title="Contact Us">
@@ -112,7 +330,6 @@
         <a href="#newsletter" class="btn btn-warning rounded-circle shadow-lg" title="Subscribe">
             <i class="fas fa-bell"></i>
         </a>
-    </div>
 
     {{-- ================= SCROLL TO TOP ================= --}}
     <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">

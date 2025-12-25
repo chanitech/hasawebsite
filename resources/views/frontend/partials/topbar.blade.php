@@ -1,15 +1,30 @@
-<div class="bg-dark text-white py-1 d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center small">
-        <div>
-            <a href="https://www.facebook.com/mefarms/" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/MenigteL?s=03" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/menigte-farms-limited" class="text-white"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div>
-            <a href="/forum" class="text-white me-3">Forum</a>
-            <a href="/projects" class="text-white me-3">Projects</a>
-            <a href="/resources" class="text-white me-3">Resources</a>
-            <a href="/login" class="text-white">Login / Subscribe</a>
+<div class="top-nav">
+    <div class="top-nav__wrapper">
+        <ul class="social-icons">
+            <li>
+                <a href="https://www.facebook.com/share/1GN8DMvA4C/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/MenigteL?s=03" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+
+        <p class="top-nav__wrapper__promo"></p>
+
+        <div class="top-nav__wrapper__selectors">
+            <a class="top-nav__auth" href="/forum">Forum</a>
+            <a class="top-nav__auth" href="/projects">Projects</a>
+            <a class="top-nav__auth" href="/resources">Resources</a>
+            <a class="top-nav__auth" href="/login">Login / Subscribe</a>
         </div>
     </div>
 </div>
