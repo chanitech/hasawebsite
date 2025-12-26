@@ -290,6 +290,78 @@ body {
 
 
 
+        @media (max-width: 767.98px) {
+    .navigator {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #eee;
+    }
+    .navigator.active {
+        display: flex;
+    }
+    .navigator ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+    .navigator li {
+        width: 100%;
+    }
+    .relative > .dropdown-menu-custom {
+        display: none !important;
+        flex-direction: column;
+        padding-left: 15px;
+        box-shadow: none;
+        position: relative;
+    }
+    .relative.open > .dropdown-menu-custom {
+        display: flex !important;
+    }
+    .menu__wrapper__functions {
+        gap: 12px; 
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+    /* Make the burger menu visible on mobile */
+    .menu-icon.-navbar {
+        display: flex;
+        cursor: pointer;
+    }
+
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .menu-icon.-navbar {
+        display: none;
+    }
+    .relative:hover > .dropdown-menu-custom {
+        display: block !important;
+    }
+}
+
+
+.relative > .dropdown-menu-custom {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+.relative.open > .dropdown-menu-custom {
+    max-height: 500px; /* adjust as needed */
+    opacity: 1;
+}
+
+
+
+
+
 
 
 
@@ -317,7 +389,7 @@ body {
     @include('frontend.partials.footer')
 
    
-    </div>
+
 
      {{-- ================= FLOATING ACTIONS ================= --}}
     <div class="floating-actions">
@@ -338,6 +410,30 @@ body {
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.menu-icon.-navbar');
+    const navigator = document.querySelector('.navigator');
+
+    // Toggle main menu on mobile
+    burger.addEventListener('click', () => {
+        navigator.classList.toggle('active');
+    });
+
+    // Toggle submenus on mobile
+    document.querySelectorAll('.relative > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth < 768) {
+                e.preventDefault(); // prevent link
+                this.parentElement.classList.toggle('open');
+            }
+        });
+    });
+});
+</script>
+
+
 
     @stack('scripts')
 </body>

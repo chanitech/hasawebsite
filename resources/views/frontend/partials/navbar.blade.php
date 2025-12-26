@@ -47,17 +47,9 @@
 
         <!-- RIGHT ICONS -->
         <div class="menu__wrapper__functions">
-            <a class="menu-icon -wishlist" href="/shop/wishlist">
-                <img src="/assets/images/header/wishlist-icon.png" alt="Wishlist">
-            </a>
+           
 
-            <div class="menu__cart">
-                <a class="menu-icon -cart" href="/">
-                    <img src="/assets/images/header/cart-icon.png" alt="Cart">
-                    <span class="cart__quantity">0</span>
-                </a>
-                <h5>Cart: <span>UGX 0</span></h5>
-            </div>
+            
 
             <a class="menu-icon -navbar" href="javascript:void(0)">
                 <div class="bar"></div>
