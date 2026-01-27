@@ -133,7 +133,7 @@
                     @endif
                     <div class="card-body text-center">
                         <h6 class="fw-bold">{{ $product->name }}</h6>
-                        <p class="text-success fw-bold">${{ number_format($product->price,2) }}</p>
+                        <p class="text-success fw-bold">Tsh {{ number_format($product->price,2) }}/=</p>
                         <a href="{{ route('frontend.product_detail', $product->id) }}" class="btn btn-warning btn-sm shadow">View Product</a>
                     </div>
                 </div>

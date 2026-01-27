@@ -157,6 +157,12 @@ public function serviceDetail($slug)
         return view('frontend.contact', compact('contact'));
     }
 
+    public function invest()
+{
+    return view('frontend.invest');
+}
+
+
     /**
      * Handle contact form submission
      */

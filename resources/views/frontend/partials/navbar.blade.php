@@ -39,7 +39,8 @@
                     </ul>
                 </li>
 
-                <li><a href="/investments">Invest</a></li>
+               <li><a href="/invest">Invest</a></li>
+
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>

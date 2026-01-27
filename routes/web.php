@@ -44,6 +44,8 @@ Route::get('/services/{slug}', [FrontendController::class, 'serviceDetail'])->na
 Route::get('/services', [FrontendController::class, 'services'])->name('frontend.services');
 Route::get('/services/{slug}', [FrontendController::class, 'serviceDetail'])->name('frontend.services.show');
 
+Route::get('/invest', [FrontendController::class, 'invest'])->name('frontend.invest');
+
 
 
 
