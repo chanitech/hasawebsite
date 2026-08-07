@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'MEMAFarms')</title>
+    <title>@yield('title', 'Hasa Constructions Limited')</title>
 
     <!-- BOOTSTRAP 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -393,15 +393,13 @@ body {
 
      {{-- ================= FLOATING ACTIONS ================= --}}
     <div class="floating-actions">
-        <a href="https://wa.me/255763889048" target="_blank" class="btn btn-success rounded-circle shadow-lg" title="WhatsApp">
+        <a href="https://wa.me/255123456789" target="_blank" class="btn btn-success rounded-circle shadow-lg" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="{{ route('frontend.contact') }}" class="btn btn-primary rounded-circle shadow-lg" title="Contact Us">
             <i class="fas fa-envelope"></i>
         </a>
-        <a href="#newsletter" class="btn btn-warning rounded-circle shadow-lg" title="Subscribe">
-            <i class="fas fa-bell"></i>
-        </a>
+        
 
     {{-- ================= SCROLL TO TOP ================= --}}
     <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
