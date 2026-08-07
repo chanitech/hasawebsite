@@ -9,7 +9,7 @@ body {
    NAVBAR
 ========================== */
 .navbar {
-    background: #1b5e20;
+    background: #013660;
 }
 
 .navbar-brand,
@@ -19,7 +19,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #ffc107 !important;
+    color: #888888 !important;
 }
 
 /* DROPDOWN */
@@ -47,7 +47,7 @@ body {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: #1b5e20;
+    background: #013660;
     color: #fff;
     border: none;
     width: 45px;
@@ -101,7 +101,7 @@ body {
 }
 
 .footer-social:hover {
-    background: #198754;
+    background: #610013;
     color: #fff;
 }
 
@@ -126,7 +126,7 @@ body {
     width: 70px;
     height: 70px;
     background: rgba(25, 135, 84, 0.1);
-    color: #198754;
+    color: #610013;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -136,9 +136,9 @@ body {
 
 .service-link {
     font-weight: 600;
-    color: #198754;
+    color: #610013;
 }
 
 .service-card:hover .service-link {
-    color: #145c32;
+    color: #3d000c;
 }

@@ -30,7 +30,7 @@
     }
     .contact-info i {
         width: 25px;
-        color: #0d6efd;
+        color: #013660;
     }
     .social-link {
         display: inline-block;

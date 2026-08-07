@@ -12,14 +12,14 @@
     }
     .hover-lift:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 30px -10px rgba(13,110,253,0.2);
+        box-shadow: 0 15px 30px -10px rgba(1,54,96,0.2);
     }
     .principle-card {
         transition: all 0.3s ease;
         border: 1px solid transparent;
     }
     .principle-card:hover {
-        border-color: #0d6efd;
+        border-color: #013660;
         transform: scale(1.02);
     }
     .objective-item {
@@ -28,7 +28,7 @@
         border-left: 3px solid transparent;
     }
     .objective-item:hover {
-        border-left-color: #0d6efd;
+        border-left-color: #013660;
         transform: translateX(5px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }

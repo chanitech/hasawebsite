@@ -22,6 +22,40 @@
 
     <style>
 
+        /* ================= BRAND COLORS (from logo) ================= */
+        :root {
+            --hasa-navy: #013660;
+            --hasa-navy-dark: #012544;
+            --hasa-maroon: #610013;
+            --hasa-gray: #888888;
+        }
+
+        .btn-primary {
+            --bs-btn-bg: var(--hasa-navy);
+            --bs-btn-border-color: var(--hasa-navy);
+            --bs-btn-hover-bg: var(--hasa-maroon);
+            --bs-btn-hover-border-color: var(--hasa-maroon);
+            --bs-btn-active-bg: var(--hasa-maroon);
+            --bs-btn-active-border-color: var(--hasa-maroon);
+            --bs-btn-disabled-bg: var(--hasa-navy);
+            --bs-btn-disabled-border-color: var(--hasa-navy);
+            --bs-btn-focus-shadow-rgb: 1, 54, 96;
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--hasa-navy);
+            --bs-btn-border-color: var(--hasa-navy);
+            --bs-btn-hover-bg: var(--hasa-navy);
+            --bs-btn-hover-border-color: var(--hasa-navy);
+            --bs-btn-active-bg: var(--hasa-navy);
+            --bs-btn-active-border-color: var(--hasa-navy);
+            --bs-btn-focus-shadow-rgb: 1, 54, 96;
+        }
+
+        .text-primary { color: var(--hasa-navy) !important; }
+        .bg-primary { background-color: var(--hasa-navy) !important; }
+        .border-primary { border-color: var(--hasa-navy) !important; }
+
         /* ================= TOP NAV ================= */
 .top-nav {
     position: fixed;
@@ -229,7 +263,7 @@ body {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #ffc107;
+            background: #013660;
             border: none;
             border-radius: 50%;
             width: 50px;

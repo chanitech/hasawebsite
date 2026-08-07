@@ -73,7 +73,7 @@
 .service-card {
     background: #1f1f1f;
     padding: 30px;
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid #013660;
     transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .service-card:hover {
@@ -82,7 +82,7 @@
     box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
 }
 .service-link {
-    color: #0d6efd;
+    color: #013660;
     font-weight: 600;
     text-decoration: none;
     position: relative;
@@ -95,7 +95,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #0d6efd;
+    background: #013660;
     transition: width 0.3s;
 }
 .service-link:hover::after {
@@ -113,7 +113,7 @@
 .feature-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15);
-    border-color: #0d6efd;
+    border-color: #013660;
 }
 
 /* LEADERSHIP CARDS */
@@ -133,7 +133,7 @@
     left: -100%;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    background: linear-gradient(90deg, #013660, #610013);
     transition: left 0.4s ease;
 }
 .leader-card:hover::before {
@@ -141,14 +141,14 @@
 }
 .leader-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px -10px rgba(13,110,253,0.3);
+    box-shadow: 0 15px 30px -10px rgba(1,54,96,0.3);
 }
 .leader-img-wrapper {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #0d6efd;
+    border: 3px solid #013660;
     transition: transform 0.4s ease;
 }
 .leader-card:hover .leader-img-wrapper {
@@ -172,8 +172,8 @@
 }
 .activity-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 30px -10px rgba(13,110,253,0.2);
-    border-color: #0d6efd;
+    box-shadow: 0 20px 30px -10px rgba(1,54,96,0.2);
+    border-color: #013660;
 }
 .activity-icon {
     width: 70px;
@@ -186,7 +186,7 @@
 }
 .activity-card:hover .activity-icon {
     transform: rotate(360deg);
-    background: #0d6efd !important;
+    background: #013660 !important;
 }
 
 /* EVENT CARDS */
@@ -194,7 +194,7 @@
     background: #f8f9fa;
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid #013660;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -206,7 +206,7 @@
     right: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(13,110,253,0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(1,54,96,0.1), transparent);
     transition: right 0.6s ease;
 }
 .event-card:hover::after {
@@ -225,7 +225,7 @@
     transition: background 0.3s;
 }
 .event-card:hover .event-date {
-    background: #0d6efd !important;
+    background: #013660 !important;
 }
 
 /* CTA SECTION */
@@ -268,7 +268,7 @@ footer a {
     display: inline-block;
 }
 footer a:hover {
-    color: #0d6efd !important;
+    color: #013660 !important;
     transform: translateX(5px);
 }
 footer .bi {
@@ -284,7 +284,7 @@ footer .bi:hover {
 }
 .stat-item:hover .text-primary {
     transform: scale(1.1);
-    text-shadow: 0 0 15px rgba(13,110,253,0.5);
+    text-shadow: 0 0 15px rgba(1,54,96,0.5);
 }
 </style>
 @endpush
@@ -365,7 +365,7 @@ HERO SLIDER (dynamic) – Enhanced with unique animations
     .hero-gradient {
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(13,110,253,0.3) 50%, rgba(0,0,0,0.8) 100%);
+        background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(1,54,96,0.3) 50%, rgba(0,0,0,0.8) 100%);
         z-index: 1;
         pointer-events: none;
     }
@@ -440,7 +440,7 @@ HERO SLIDER (dynamic) – Enhanced with unique animations
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: rgba(13,110,253,0.3);
+        background: rgba(1,54,96,0.3);
         backdrop-filter: blur(5px);
         border: 2px solid rgba(255,255,255,0.5);
         transition: all 0.3s;
@@ -448,7 +448,7 @@ HERO SLIDER (dynamic) – Enhanced with unique animations
         transform: translateY(-50%);
     }
     .custom-control:hover {
-        background: rgba(13,110,253,0.8);
+        background: rgba(1,54,96,0.8);
         border-color: white;
         transform: translateY(-50%) scale(1.1);
     }
@@ -702,7 +702,7 @@ LEADERSHIP TEAM
             <div class="col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="{{ $index * 100 }}">
                 <div class="leader-card text-center">
                     <div class="leader-img-wrapper mx-auto mb-3">
-                        <img src="https://ui-avatars.com/api/?name={{ urlencode($leader[0]) }}&size=200&background=0d6efd&color=fff"
+                        <img src="https://ui-avatars.com/api/?name={{ urlencode($leader[0]) }}&size=200&background=013660&color=fff"
                              alt="{{ $leader[0] }}"
                              class="rounded-circle img-fluid">
                     </div>
