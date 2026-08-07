@@ -25,7 +25,7 @@ FOOTER
                 <h5 class="fw-bold mb-3">Quick Links</h5>
                 <ul class="list-unstyled small">
                     <li class="mb-2"><a href="{{ route('frontend.about') }}" class="text-light text-decoration-none">About Us</a></li>
-                    <li class="mb-2"><a href="{{ route('frontend.services.index') }}" class="text-light text-decoration-none">Services</a></li>
+                    <li class="mb-2"><a href="{{ route('frontend.services') }}" class="text-light text-decoration-none">Services</a></li>
                     <li class="mb-2"><a href="{{ route('frontend.gallery') }}" class="text-light text-decoration-none">Projects</a></li>
                     <li class="mb-2"><a href="{{ route('frontend.contact') }}" class="text-light text-decoration-none">Contact</a></li>
                     <li class="mb-2"><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>

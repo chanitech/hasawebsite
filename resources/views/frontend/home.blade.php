@@ -646,7 +646,7 @@ OUR APPROACH
                 <p class="lead text-muted">
                     Our directors and technical team bring hands-on experience across civil, mechanical, and electrical disciplines, backed by modern methodologies like Building Information Modeling (BIM) and a strict commitment to safety.
                 </p>
-                <a href="{{ route('frontend.services.index') }}" class="btn btn-primary btn-lg mt-3">View Our Services</a>
+                <a href="{{ route('frontend.services') }}" class="btn btn-primary btn-lg mt-3">View Our Services</a>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <img src="{{ asset('images/hasalogo.jpg') }}" alt="Hasa Constructions Limited" class="img-fluid rounded shadow-lg" style="transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">

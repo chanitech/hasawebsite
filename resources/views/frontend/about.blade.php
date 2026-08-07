@@ -213,7 +213,7 @@
     <div class="container" data-aos="zoom-in">
         <h2 class="fw-bold mb-3">Ready to start your project?</h2>
         <p class="lead mb-4">Get in touch with Hasa Constructions Limited for a consultation.</p>
-        <a href="{{ route('frontend.services.index') }}" class="btn btn-primary btn-lg me-2">Our Services</a>
+        <a href="{{ route('frontend.services') }}" class="btn btn-primary btn-lg me-2">Our Services</a>
         <a href="{{ route('frontend.contact') }}" class="btn btn-outline-primary btn-lg">Contact Us</a>
     </div>
 </section>
