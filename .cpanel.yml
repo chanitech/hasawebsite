@@ -1,11 +1,6 @@
 ---
 deployment:
   tasks:
-    # Resolve the PHP 8.3 binary and composer, then install production dependencies.
-    # cPanel servers normally ship composer at /opt/cpanel/composer/bin/composer and
-    # EasyApache PHP at /opt/cpanel/ea-php83/root/usr/bin/php; fall back to PATH.
-    - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && PHPBIN=$( [ -x /opt/cpanel/ea-php83/root/usr/bin/php ] && echo /opt/cpanel/ea-php83/root/usr/bin/php || command -v php ) && COMPOSER=$( [ -f /opt/cpanel/composer/bin/composer ] && echo /opt/cpanel/composer/bin/composer || command -v composer ) && echo "PHP=$PHPBIN COMPOSER=$COMPOSER" && $PHPBIN $COMPOSER install --no-dev --optimize-autoloader --no-interaction --prefer-dist'
-
     # Recreate the public/storage symlink if the checkout lost it.
     - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && [ -e public/storage ] || ln -s ../storage/app/public public/storage'
 
@@ -13,7 +8,7 @@ deployment:
     - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && chmod -R 775 storage bootstrap/cache'
 
     # Run migrations. Requires .env to already hold valid DB credentials.
-    - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && PHPBIN=$( [ -x /opt/cpanel/ea-php83/root/usr/bin/php ] && echo /opt/cpanel/ea-php83/root/usr/bin/php || command -v php ) && $PHPBIN artisan migrate --force'
+    - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && PHPBIN=$(command -v php || echo /opt/cpanel/ea-php82/root/usr/bin/php); [ -x "$PHPBIN" ] || PHPBIN=/opt/cpanel/ea-php83/root/usr/bin/php; echo "Using PHP: $PHPBIN"; $PHPBIN artisan migrate --force'
 
     # Rebuild caches against the deployed code.
-    - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && PHPBIN=$( [ -x /opt/cpanel/ea-php83/root/usr/bin/php ] && echo /opt/cpanel/ea-php83/root/usr/bin/php || command -v php ) && $PHPBIN artisan config:cache && $PHPBIN artisan route:cache && $PHPBIN artisan view:cache'
+    - /bin/bash -lc 'cd /home/hasaconstruction/repositories/hasawebsite && PHPBIN=$(command -v php || echo /opt/cpanel/ea-php82/root/usr/bin/php); [ -x "$PHPBIN" ] || PHPBIN=/opt/cpanel/ea-php83/root/usr/bin/php; $PHPBIN artisan config:cache && $PHPBIN artisan route:cache && $PHPBIN artisan view:cache'
