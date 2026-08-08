@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- ANIMATE.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -307,8 +307,14 @@ body {
         }
 
         .card h5, .card h6 {
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
+
+        h1, h2, h3, h4, h5, h6,
+        .hero-title, .leader-card h5, .service-title,
+        .navbar-brand, .footer-section h5 {
+            font-family: 'Playfair Display', serif;
+        }
 .card-text {
     font-size: 0.9rem;
 }
