@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#012544"/>
+      <stop offset="55%" stop-color="#013660"/>
+      <stop offset="100%" stop-color="#3a0a15"/>
+    </linearGradient>
+    <linearGradient id="stripe1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="900" fill="url(#bg1)"/>
+
+  <!-- Logo-echo diagonal stripes, right side -->
+  <g opacity="0.5">
+    <polygon points="1250,900 1380,900 1620,150 1490,150" fill="url(#stripe1)"/>
+    <polygon points="1420,900 1550,900 1790,150 1660,150" fill="url(#stripe1)"/>
+    <polygon points="1590,900 1720,900 1920,280 1920,150 1830,150" fill="url(#stripe1)"/>
+  </g>
+
+  <!-- Skyline silhouette -->
+  <g fill="#000000" opacity="0.25">
+    <rect x="80" y="560" width="90" height="340"/>
+    <rect x="190" y="480" width="70" height="420"/>
+    <rect x="280" y="610" width="110" height="290"/>
+    <rect x="410" y="420" width="80" height="480"/>
+    <rect x="510" y="540" width="60" height="360"/>
+  </g>
+
+  <!-- Crane -->
+  <g stroke="#c9d4dc" stroke-width="6" fill="none" opacity="0.55" stroke-linecap="round">
+    <line x1="640" y1="900" x2="640" y2="260"/>
+    <line x1="640" y1="260" x2="1020" y2="260"/>
+    <line x1="640" y1="260" x2="560" y2="330"/>
+    <line x1="900" y1="260" x2="900" y2="380"/>
+    <line x1="640" y1="330" x2="700" y2="260"/>
+    <line x1="640" y1="400" x2="740" y2="260"/>
+  </g>
+
+  <!-- Sun / accent circle -->
+  <circle cx="1750" cy="180" r="70" fill="#888888" opacity="0.15"/>
+</svg>

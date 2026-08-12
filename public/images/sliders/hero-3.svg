@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#012544"/>
+      <stop offset="60%" stop-color="#013660"/>
+      <stop offset="100%" stop-color="#4a0c18"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="900" fill="url(#bg3)"/>
+
+  <!-- Centered logo-echo chevrons -->
+  <g opacity="0.4">
+    <polygon points="760,900 880,900 1160,150 1040,150" fill="#ffffff" fill-opacity="0.07"/>
+    <polygon points="920,900 1040,900 1320,150 1200,150" fill="#ffffff" fill-opacity="0.09"/>
+    <polygon points="1080,900 1200,900 1440,300 1440,150 1360,150" fill="#888888" fill-opacity="0.16"/>
+  </g>
+
+  <!-- Steel frame / building under construction -->
+  <g stroke="#c9d4dc" stroke-width="5" fill="none" opacity="0.5">
+    <rect x="260" y="380" width="420" height="520"/>
+    <line x1="260" y1="460" x2="680" y2="460"/>
+    <line x1="260" y1="540" x2="680" y2="540"/>
+    <line x1="260" y1="620" x2="680" y2="620"/>
+    <line x1="260" y1="700" x2="680" y2="700"/>
+    <line x1="260" y1="780" x2="680" y2="780"/>
+    <line x1="360" y1="380" x2="360" y2="900"/>
+    <line x1="470" y1="380" x2="470" y2="900"/>
+    <line x1="580" y1="380" x2="580" y2="900"/>
+  </g>
+
+  <circle cx="1700" cy="200" r="65" fill="#888888" opacity="0.15"/>
+</svg>
