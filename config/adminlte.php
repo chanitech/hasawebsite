@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'HASA_CONSTRUCTIONS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>HASA</b>CONSTRUCTIONS',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -318,7 +318,7 @@ return [
     // Dashboard
     [
         'text' => 'Dashboard',
-        'url'  => 'admin/dashboard',
+        'url'  => 'dashboard',
         'icon' => 'fas fa-fw fa-tachometer-alt',
     ],
     // Blog
@@ -379,13 +379,8 @@ return [
     ['header' => 'ACCOUNT SETTINGS'],
     [
         'text' => 'Profile',
-        'url'  => 'admin/settings',
+        'url'  => 'profile',
         'icon' => 'fas fa-fw fa-user',
-    ],
-    [
-        'text' => 'Change Password',
-        'url'  => 'admin/settings',
-        'icon' => 'fas fa-fw fa-lock',
     ],
 
     ['header' => 'LABELS'],
