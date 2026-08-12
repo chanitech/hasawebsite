@@ -5,7 +5,6 @@ use App\Http\Controllers\ProfileController;
 
 // Frontend Controllers
 use App\Http\Controllers\Frontend\FrontendController;
-use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
 
 // Admin Controllers
 use App\Http\Controllers\Admin\CategoryController;
@@ -32,9 +31,6 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.c
 Route::post('/contact', [FrontendController::class, 'contactSubmit'])->name('frontend.contact.submit');
 
 // Frontend Blog Routes
-Route::get('/blogs', [FrontendBlogController::class, 'index'])->name('frontend.blogs.index');
-Route::get('/blogs/{slug}', [FrontendBlogController::class, 'show'])->name('frontend.blogs.show');
-
 Route::get('/blog/{slug}', [FrontendController::class, 'blogDetail'])->name('frontend.blog_detail');
 
 // Frontend Services Routes
@@ -57,16 +53,16 @@ Route::get('/invest', [FrontendController::class, 'invest'])->name('frontend.inv
 */
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
-    Route::resource('categories', CategoryController::class);
-    Route::resource('products', ProductController::class);
-    Route::resource('gallery', GalleryController::class);
-    Route::resource('contacts', ContactController::class);
-    Route::resource('orders', OrderController::class);
-    Route::resource('site_contents', SiteContentController::class);
+    Route::resource('categories', CategoryController::class)->except(['show']);
+    Route::resource('products', ProductController::class)->except(['show']);
+    Route::resource('gallery', GalleryController::class)->except(['show']);
+    Route::resource('contacts', ContactController::class)->except(['create', 'store', 'edit', 'update']);
+    Route::resource('orders', OrderController::class)->except(['create', 'store', 'edit']);
+    Route::resource('site_contents', SiteContentController::class)->except(['create', 'store', 'show', 'destroy']);
 
-    Route::resource('blogs', AdminBlogController::class);
+    Route::resource('blogs', AdminBlogController::class)->except(['show']);
     Route::resource('sliders', SliderController::class);
-    Route::resource('services', ServiceController::class);
+    Route::resource('services', ServiceController::class)->except(['show']);
 
 });
 
