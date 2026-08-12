@@ -9,7 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('sliders.update', $slider) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.sliders.update', $slider) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -37,7 +37,7 @@
                 </div>
 
                 <button class="btn btn-primary">Update Slider</button>
-                <a href="{{ route('sliders.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('admin.sliders.index') }}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
     </div>

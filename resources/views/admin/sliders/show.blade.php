@@ -14,7 +14,7 @@
                 <img src="{{ asset('storage/'.$slider->image) }}" width="300">
             @endif
             <p>Created at: {{ $slider->created_at->format('d M Y') }}</p>
-            <a href="{{ route('sliders.index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('admin.sliders.index') }}" class="btn btn-secondary">Back</a>
         </div>
     </div>
 @stop

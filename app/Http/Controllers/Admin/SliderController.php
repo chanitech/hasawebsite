@@ -16,6 +16,11 @@ class SliderController extends Controller
         return view('admin.sliders.index', compact('sliders'));
     }
 
+    public function show(Slider $slider)
+    {
+        return view('admin.sliders.show', compact('slider'));
+    }
+
     public function create()
     {
         return view('admin.sliders.create');
@@ -28,7 +33,7 @@ class SliderController extends Controller
             'subtitle'     => 'nullable|string|max:255',
             'button_text'  => 'nullable|string|max:100',
             'button_link'  => 'nullable|url|max:255',
-            'image'        => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
+            'image'        => 'required|image|mimes:jpg,jpeg,png,gif|max:122880',
             'position'     => 'nullable|integer',
             'is_active'    => 'nullable|boolean',
         ]);
